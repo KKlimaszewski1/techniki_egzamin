@@ -1,0 +1,19 @@
+<template name="ZadaniaWykonane">
+  <h1 class="page-title">Zadania Wykonane</h1>
+
+    {{#each zadania}}
+      {{> ListaZadanWykonanych}}
+    {{else}}
+    <div class="informacja">
+      <p>Żadne <a href="/ksiazka-zadan">zadanie</a> jak do tej pory nie zostało wykonane.</p>
+    </div>
+    {{/each}}
+
+</template>
+
+<template name="ListaZadanWykonanych">
+  <div class="lista-zadan">
+    <h3>{{nazwa}}</h3>
+    <p>{{opis}}</p>
+  </div>
+</template>

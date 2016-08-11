@@ -1,0 +1,1 @@
+{"head":"","body":"","js":"\nTemplate.__checkName(\"HomeLayout\");\nTemplate[\"HomeLayout\"] = new Template(\"Template.HomeLayout\", (function() {\n  var view = this;\n  return [ Spacebars.include(view.lookupTemplate(\"Header\")), HTML.Raw('\\n  <main>\\n    <div class=\"billboard\">\\n      <h2>Organize Your Meals</h2>\\n    </div>\\n  </main>') ];\n}));\n","bodyAttrs":{}}

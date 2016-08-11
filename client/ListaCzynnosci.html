@@ -1,0 +1,12 @@
+<template name="ListaCzynnosci">
+  <h1 class="page-title">Moja Lista Czynności</h1>
+  <ul class="lista-czynnosci">
+    {{#each listaCzynnosci}}
+      {{#each czynnosci}}
+        <li>{{nazwa}} - <span class="opis">{{opis}}</span></li>
+      {{/each}}
+    {{else}}
+      <p>Proszę dodać <a href="/ksiazka-zadan">zadania</a> do wykonania.</p>
+    {{/each}}
+  </ul>
+</template>

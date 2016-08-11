@@ -1,0 +1,10 @@
+<template name="PojedynczeZadanie">
+
+  <div class="lista-zadan">
+    <h3>{{zadanie.nazwa}}</h3>
+    <p>{{zadanie.opis}}</p>
+    {{#each zadanie.czynnosci}}
+      <span class="czynnosc">{{nazwa}} - {{opis}}</span>
+    {{/each}}
+  </div>
+</template>

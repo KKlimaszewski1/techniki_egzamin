@@ -1,0 +1,1 @@
+{"head":"","body":"","js":"\nTemplate.__checkName(\"Recipes\");\nTemplate[\"Recipes\"] = new Template(\"Template.Recipes\", (function() {\n  var view = this;\n  return Spacebars.include(view.lookupTemplate(\"NewRecipe\"));\n}));\n","bodyAttrs":{}}

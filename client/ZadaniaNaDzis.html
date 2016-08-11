@@ -1,0 +1,20 @@
+<template name="ZadaniaNaDzis">
+  <h1 class="page-title">Zadania na Dzis</h1>
+
+    {{#each zadania}}
+      {{> ListaZadan}}
+    {{else}}
+    <div class="informacja">
+      <p>Proszę dodać <a href="/ksiazka-zadan">zadania</a> do wykonania.</p>
+    </div>
+    {{/each}}
+
+</template>
+
+<template name="ListaZadan">
+  <div class="lista-zadan">
+    <h3>{{nazwa}}</h3>
+    <p>{{opis}}</p>
+    <a href="/zadanie/{{_id}}">Szczegóły</a>
+  </div>
+</template>

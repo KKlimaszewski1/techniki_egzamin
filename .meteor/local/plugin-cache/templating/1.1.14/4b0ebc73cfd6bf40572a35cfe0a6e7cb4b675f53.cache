@@ -1,0 +1,1 @@
+{"head":"","body":"","js":"\nTemplate.__checkName(\"Header\");\nTemplate[\"Header\"] = new Template(\"Template.Header\", (function() {\n  var view = this;\n  return HTML.HEADER(HTML.Raw('\\n      <a href=\"/\"><h1>Ciążowy Organizer <i class=\"fa fa-heartbeat\"></i></h1></a>\\n      '), Spacebars.include(view.lookupTemplate(\"loginButtons\")), \"\\n  \");\n}));\n","bodyAttrs":{}}

@@ -1,0 +1,33 @@
+<template name="Zadanie">
+  <article class="zadanie {{#if wLiscieZadan}}na-liscie{{/if}}{{#if zadaniaWykonane}}wykonane{{/if}}">
+    <h3>{{nazwa}}</h3>
+    {{#if editMode}}
+      {{>quickForm collection="Zadania" id=updateZadanieId type="update" doc=this autosave=true}}
+    {{else}}
+      <p>{{opis}}</p>
+      <p>
+        {{#each czynnosci}}
+          <span class="czynnosc">{{nazwa}} - {{opis}}</span>
+        {{/each}}
+      </p>
+      <div class="buttons">
+        <div class="left" align="left">
+          {{#if wLiscieZadan}}
+            <button class="btn-deny toggle-lista-zadan">Usuń Z Listy Zadań</button>
+          {{else}}
+            <button class="btn-primary toggle-lista-zadan">Dodaj Do Listy Zadań</button>
+          {{/if}}
+        </div>
+        <div class="right" align="right">
+          {{#if zadaniaWykonane}}
+            <button class="btn-deny toggle-zadania-wykonane">Usuń Z Listy Wykonanych</button>
+          {{else}}
+            <button class="btn-primary toggle-zadania-wykonane">Dodaj Do Listy Wykonanych</button>
+          {{/if}}
+        </div>
+      </div>
+    {{/if}}
+    <i class="fa fa-pencil"></i>
+    <i class="fa fa-trash"></i>
+  </article>
+</template>
