@@ -1,4 +1,21 @@
-var require = meteorInstall({"client":{"layouts":{"template.MainLayout.js":function(){
+var require = meteorInstall({"client":{"layouts":{"template.HomeLayout.js":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// client/layouts/template.HomeLayout.js                                                             //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+                                                                                                     // 1
+Template.__checkName("HomeLayout");                                                                  // 2
+Template["HomeLayout"] = new Template("Template.HomeLayout", (function() {                           // 3
+  var view = this;                                                                                   // 4
+  return [ Spacebars.include(view.lookupTemplate("Header")), HTML.Raw('\n  <main>\n    <div class="billboard">\n      <ul>\n        <li>Aplikacja powstała z myślą o kobietach w ciąży. Wraz z żoną zastanawiałem się nad nowym pomysłem projektu. Z racji, że żona jest położną wpadła na pomysł stworzenia aplikacji służącej do zorganizowania i zaplanowania 40 tygodni ciąży. Aplikacja ma za zadanie spisać wszystkie istotne zadania, obowiązki jakie czekają na kobietę w ciąży w okresie 40 najbliższych tygodni. Powinna umożliwić ich opisanie, dodanie elementów potrzebnych do wykonania czy cennych wskazówek na jakie trzeba zwrócić uwagę. Ponadto istotnym elementem jest przejrzysty panel użytkownika, możliwość zaznaczenia czynności do wykonania na dziś lub czynności już wykonanych. Aplikacja powstała na zaliczenie z przedmiotu Techniki Internetowe.</li>\n        <li>W aplikacji można założyć konto lub zalogować się na konto już istniejące, które dałem do wypełnienia żonie: madzia3d@o2.pl, qwe123</li>\n      </ul>\n    </div>\n  </main>') ];
+}));                                                                                                 // 6
+                                                                                                     // 7
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"template.MainLayout.js":function(){
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                   //
@@ -54,7 +71,7 @@ Template["Header"] = new Template("Template.Header", (function() {              
 Template.__checkName("SideNav");                                                                     // 2
 Template["SideNav"] = new Template("Template.SideNav", (function() {                                 // 3
   var view = this;                                                                                   // 4
-  return HTML.Raw('<nav class="side-nav">\n    <ul>\n      <li><a href="/ksiazka-zadan"><i class="fa fa-book"></i> Książka Zadań </a></li>\n      <li><a href="/zadania-na-dzis"><i class="fa fa-calendar"></i> Zadania Na Dziś </a></li>\n      <li><a href="/lista-czynnosci"><i class="fa fa-list-alt"></i> Lista Czynnosci </a></li>\n      <li><a href="/zadania-wykonane"><i class="fa fa-check-square-o"></i> Zadania Wykonane </a></li>\n    </ul>\n  </nav>');
+  return HTML.Raw('<nav class="side-nav">\n    <ul>\n      <li><a href="/ksiazka-zadan"><i class="fa fa-book"></i> Książka Zadań </a></li>\n      <li><a href="/zadania-na-dzis"><i class="fa fa-calendar"></i> Zadania Na Dziś </a></li>\n      <li><a href="/lista-czynnosci"><i class="fa fa-list-alt"></i> Lista Czynności </a></li>\n      <li><a href="/zadania-wykonane"><i class="fa fa-check-square-o"></i> Zadania Wykonane </a></li>\n    </ul>\n  </nav>');
 }));                                                                                                 // 6
                                                                                                      // 7
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -825,6 +842,7 @@ Zadania.attachSchema(Zadanie);                                                  
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }}},{"extensions":[".js",".json",".html",".css"]});
+require("./client/layouts/template.HomeLayout.js");
 require("./client/layouts/template.MainLayout.js");
 require("./client/partials/template.Header.js");
 require("./client/partials/template.SideNav.js");
